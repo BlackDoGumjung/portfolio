@@ -1,0 +1,124 @@
+/*+++++++++++++++++++++++ media query +++++++++++++++++++++++*/
+
+@charset "utf-8";
+
+html, body { height: 100%; overflow: hidden; font-family: 'Nanum Gothic', sans-serif; background: #6bb6bb; }
+
+nav { position: absolute; top: 0; left: 0; z-index: 900; width: 100vw; height: 100px; }
+nav ul { position: absolute; top: 15px; right: 30px; width: 300px; }
+nav ul li { position: relative; display: inline-block; font-size: 35px; margin-right: 13px;}
+nav ul li:first-child::after { content:""; position: absolute; width: 1px; height: 25px; margin-left: 14px; transform: translateY(7px); background: #6bb6bb;}
+nav ul li:first-child { padding-right: 15px; }
+nav ul li:nth-child(3)::after { content:""; position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #c97b75; }
+nav ul li a { color: #6bb6bb; }
+nav ul li img { display: block; width: 50px; height: 50px; border-radius: 50%; object-fit: cover; transform: translateY(10px); }
+
+section.title { height: 100%; }
+section.title div.menu_toggle { z-index: 900; position: fixed; top: 0; left: 0; display: block; cursor: pointer; width: 100px; height: 100px; background-color: #4b7684; border-bottom-right-radius: 100%; }
+section.title div.menu_toggle:active i { opacity: 0.8; }
+section.title div.menu_toggle i { font-size: 30px; color: #f0f0f0; }
+div.menu_toggle i.menu_open, div.menu_toggle i.menu_close { position: absolute; top: 40%; left: 40%; margin-top: -15px; margin-left: -12px; transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1); }
+.menu_toggle .menu_open { transform-origin: -100px -100px; }
+.menu_toggle .menu_close { transform: rotate(20deg); transform-origin: -100px -160px; }
+.side .content { transform: rotate(-30deg); }
+.side .menu_open { transform: rotate(-25deg); }
+.side .menu_close { transform: rotate(0); }
+.side .menu_items li { transform: translateX(0); transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.side .menu_items li:nth-child(2) { transform: translateX(20px); transition-delay: 0.47s; }
+.side .menu_items li:nth-child(3) { transform: translateX(40px); transition-delay: 0.48s; }
+.side .menu_items li:nth-child(4) { transform: translateX(60px); transition-delay: 0.49s; }
+.side .menu_items li:nth-child(5) { transform: translateX(80px); transition-delay: 0.5s; }
+.side .menu_items li:nth-child(6) { transform: translateX(80px); transition-delay: 0.51s; }
+ul.menu_items { position: fixed; bottom: 0; left: 50px; list-style-type: none; margin: 0; padding: 0; }
+ul.menu_items li { height: 60px; margin-bottom: 15px; transform: translateX(-300px); transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1); }
+ul.menu_items li:nth-child(5) { display: inline-block; width: 50px; font-size: 40px; color: #fff; }
+ul.menu_items li:nth-child(6) { display: inline-block; width: 40px; font-size: 40px; color: #fff; }
+ul.menu_items a { display: block; letter-spacing: 1px; color: #fff; transition: color 0.2s; }
+ul.menu_items a .icon { position: relative; display: inline-block; margin-right: 15px; color: #f0f0f0; }
+ul.menu_items a .icon:after { position: absolute; top: 50%; left: 50%; content: ''; display: block; width: 60px; height: 60px; margin-left: -32px; margin-top: -30px; border-radius: 100%; border: 2px solid #f0f0f0; transition: border-color 0.2s; }
+ul.menu_items a:hover .icon { color: #4b7684 }
+ul.menu_items a:hover { color: #4b7684; }
+ul.menu_items a:hover .icon:after { border-color: #4b7684; }
+ul.menu_items a:active .icon { color: #4b7684; }
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!CSS_RESPONSIVE_MOBILE!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* ====== mobile(start) ====== */
+@media screen and (max-width: 767px)  {
+
+
+   nav { position: absolute; top: 0; left: 150px; z-index: 900; width: 100vw; height: 100px; }
+   nav ul { position: absolute; top: 5px; }
+   nav ul li { position: relative; display: inline-block; font-size: 20px; margin-right: 5px;}
+   nav ul li:first-child::after { content:""; position: absolute; width: 1px; height: 16px; margin-left: 14px; transform: translateY(1px); background: #6bb6bb;}
+   nav ul li:first-child { padding-right: 15px; }
+   nav ul li:nth-child(3)::after { content:""; position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #c97b75; }
+   nav ul li a { color: #6bb6bb; }
+   nav ul li img { display: block; width: 30px; height: 30px; border-radius: 50%; object-fit: cover; transform: translateY(10px); }
+   ul.menu_items li { height: 50px; margin-bottom: 0px; transform: translateX(-300px); transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1); }
+
+   section.title div.menu_toggle { z-index: 900; position: fixed; top: 0; left: 0; display: block; cursor: pointer; width: 50px; height: 50px; background-color: #4b7684; border-bottom-right-radius: 100%; }
+   section.title div.menu_toggle i { font-size: 20px; color: #f0f0f0; }
+   div.menu_toggle i.menu_open, div.menu_toggle i.menu_close { position: absolute; top: 40%; left: 40%; margin-top: -9px; margin-left: -7px; transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1); }
+   ul.menu_items { position: fixed; bottom: 290px; left: 30px; list-style-type: none; margin: 0; padding: 0; }
+   ul.menu_items a .icon { position: relative; display: inline-block; margin-right: 15px; color: #f0f0f0; font-size: 20px; }
+   ul.menu_items a .icon:after { position: absolute; top: 50%; left: 50%; content: ''; display: block; width: 40px; height: 40px; margin-left: -22px; margin-top: -20px; border-radius: 100%; border: 2px solid #f0f0f0; transition: border-color 0.2s; }
+
+   ul.menu_items a { display: block; letter-spacing: 1px; color: #fff; transition: color 0.2s; font-size: 13px; }
+   ul.menu_items a i.fab { font-size: 25px;}
+
+
+
+
+
+}
+
+/* ====== mobile(end) ====== */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!CSS_RESPONSIVE_TABLE!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* ====== tablet(start) ====== */
+
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
+
+   ul.menu_items { position: fixed; bottom: 150px; left: 50px; list-style-type: none; margin: 0; padding: 0; }
+
+
+}
+
+/* ====== tablet(end) ====== */
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!CSS_RESPONSIVE_WEB!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* ====== desktop(start) ====== */
+@media screen and (min-width: 1025px) {
+
+
+
+
+}
+
+/* ====== desktop(end) ====== */
+
+
+
+/*common css*/
+
