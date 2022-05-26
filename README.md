@@ -3,7 +3,7 @@
 https://blackdogumjung.github.io/portfolio/
 
 ### 🤔Summary
-항상 유연하게 사고하며, 문제의 해결 방안을 도출하는 프론트엔드 개발자가 되고자 꾸준히 공부하고 있습니다.
+유연하고 새롭게 사고하며, 문제의 빠른 해결을 도출하는 프론트엔드 개발자가 되고자 공부하고 있습니다.
 
 ![메인페이지](./images/main_page.png)
 
